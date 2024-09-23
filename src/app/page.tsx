@@ -21,7 +21,7 @@ export default function Home() {
 
       <div className="flex flex-col relative items-center gap-40">
         <section className="flex flex-col items-center gap-10">
-          <h1 className="text-6xl text-center">DOCTEURS. INVITÉS</h1>
+          <h1 className="text-4xl lg:text-6xl text-center">EXPERTS. INVITÉS</h1>
 
           <InfiniteMovingCards items={guests} />
 
