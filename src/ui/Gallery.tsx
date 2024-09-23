@@ -6,9 +6,7 @@ import { motion } from "framer-motion"
 const Gallery = ({ items }: { items: Array<string | StaticImageData> }) => (
   <ResponsiveMasonry
     columnsCountBreakPoints={{
-      1024: 4,
-      760: 3,
-      500: 2,
+      1024: 2
     }}
     className='w-full'
   >
