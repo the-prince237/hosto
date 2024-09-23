@@ -1,6 +1,7 @@
-import { countdownBg, heroBg, heroDarkener } from '@/assets'
+import { heroBg, heroDarkener } from '@/assets'
 import Image from 'next/image'
 import React from 'react'
+import CountDown from './CountDown'
 
 const Hero = () => {
   return (
@@ -13,11 +14,11 @@ const Hero = () => {
       {/* Hero Content */}
       {/* Countdown */}
       <div className='flex flex-col pt-16 relative w-full h-full items-center gap-28'>
-        <Image src={countdownBg} alt='countdown-bg' />
+        <CountDown />
         {/* Title */}
-        <div className="text-center">
-          <h1 className="text-[#feba08] text-[40px] font-bold leading-[41.48px]">LES JOURNÉES SCIENTIFIQUES DE LA<br/></h1>
-          <h1 className="text-white text-[64px] font-bold leading-[66.37px]">GASTROENTEROLOGIE</h1>
+        <div className="text-center z-10">
+          <h1 className="text-[#feba08] text-4xl font-bold leading-[50.48px]">LES JOURNÉES SCIENTIFIQUES DE LA<br/></h1>
+          <h1 className="text-white text-8xl font-bold leading-[66.37px] bg-clip-text text-transparent bg-gradient-to-tr from-white to-[#71757E]">GASTROENTEROLOGIE</h1>
         </div>
       </div>
 

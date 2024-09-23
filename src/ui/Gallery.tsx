@@ -9,7 +9,7 @@ const Gallery = ({ items }: { items: Array<string | StaticImageData> }) => (
       760: 3,
       500: 2,
     }}
-    className='w-[100%]'
+    className='w-full'
   >
     <Masonry columnsCount={4} className='items-end'>
       {items.map((item, index) => (
