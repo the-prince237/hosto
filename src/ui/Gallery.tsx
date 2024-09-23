@@ -1,5 +1,6 @@
 import Image, { StaticImageData } from 'next/image';
 import Masonry, { ResponsiveMasonry } from 'react-responsive-masonry';
+import { motion } from "framer-motion"
 
 
 const Gallery = ({ items }: { items: Array<string | StaticImageData> }) => (
@@ -13,8 +14,11 @@ const Gallery = ({ items }: { items: Array<string | StaticImageData> }) => (
   >
     <Masonry columnsCount={4} className='items-end'>
       {items.map((item, index) => (
-        <div
-          className='relative bottom-0 m-[5px] flex cursor-pointer items-center justify-center bg-gradient-to-br from-transparent to-[#5a5f92] p-[7px] hover:bottom-[10px]'
+        <motion.div
+          initial={{ transform: 'translateY(500px)'}}
+          animate={{ transform: 'translateY(0px)'}}
+          transition={{ duration: 0.5 + index * 0.5,  }}
+          className='relative z-20 bottom-0 m-[5px] flex cursor-pointer items-center justify-center bg-gradient-to-br from-transparent to-[#5a5f92] p-[7px] hover:bottom-[10px]'
           key={index}
         >
           <Image
@@ -23,7 +27,7 @@ const Gallery = ({ items }: { items: Array<string | StaticImageData> }) => (
             src={item}
             alt='galery item'
           />
-        </div>
+        </motion.div>
       ))}
     </Masonry>
   </ResponsiveMasonry>

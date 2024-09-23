@@ -13,6 +13,12 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        'protest': ['protest-guerrilla']
+      },
+      blur: {
+        footer: '147.7px',
+      },
     },
   },
   plugins: [],
