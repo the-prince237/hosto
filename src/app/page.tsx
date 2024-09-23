@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <div className="overflow-x-hidden">
       <Hero />
-      <div className="-translate-y-96 w-full">
+      <div className="lg:-translate-y-96 w-full">
         <Gallery items={gallery} />
       </div>
     </div>
